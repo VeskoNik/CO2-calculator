@@ -1,4 +1,4 @@
-import { html, page } from ".../src/lib.js";
+import { html, page } from "../src/lib.js";
 
 const homeTemplate = (onSubmit) => html`
     <h1>CO2 Calculator</h1>
