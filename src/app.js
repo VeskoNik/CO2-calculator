@@ -1,5 +1,5 @@
-import { homeView } from "./views/home.js";
-import { resultView } from "./views/result.js";
+import { homeView } from "../views/home.js";
+import { resultView } from "../views/result.js";
 import { page,render } from "./lib.js";
 
 const root = document.querySelector('body');
