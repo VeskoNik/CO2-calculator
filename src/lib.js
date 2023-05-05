@@ -4,6 +4,5 @@ import page from "./lib/page.mjs"
 export {
     html,
     render,
-    until,
     page
 }
