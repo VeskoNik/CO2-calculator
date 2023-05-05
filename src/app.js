@@ -1,7 +1,7 @@
 import { homeView } from "../views/home.js";
 import { resultView } from "../views/result.js";
 import { page,render } from "./lib.js";
-
+console.log('it works')
 const root = document.getElementById('root');
 
 page(decorateContext);
