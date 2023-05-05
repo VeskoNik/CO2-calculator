@@ -1,4 +1,4 @@
-import { html, page } from "../src/lib.js";
+import { html, page } from ".../src/lib.js";
 
 const loadingTemplate = () => html`
 <div class="lds-heart">loading<div></div></div>
