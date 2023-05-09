@@ -6,7 +6,7 @@ const root = document.getElementById('root');
 
 page(decorateContext);
 page('/CO2-calculator/' , homeView);
-page('/result' , resultView);
+page('/CO2-calculator/result' , resultView);
 page.start();
 
 export function decorateContext(ctx, next) {
