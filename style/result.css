@@ -1,6 +1,8 @@
 @media only screen and (max-width: 800px) {
     body {
-      
+        background-image: url('/images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 54vh;
         height: 99vh;
         background-position: center,center;
@@ -65,7 +67,11 @@ h1 {
     font-size: 40px;
 }
 }
-
+body {
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #result {
     background-color: rgba(0, 0, 0, 0.5);
