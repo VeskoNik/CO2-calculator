@@ -1,7 +1,7 @@
 import { html, page } from "../src/lib.js";
 
 const loadingTemplate = () => html`
-<div class="lds-heart">loading<div></div></div>
+<div class="lds-heart"><div></div></div>
 `
 const resultTemplate = (item,onClick) => html`
 <h1>Results</h1>
