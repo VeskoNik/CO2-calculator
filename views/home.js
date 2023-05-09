@@ -35,9 +35,9 @@ function onSubmit(e){
     const distance = formData.get('distance');
     const consumption = formData.get('consumption');
     const gallons = formData.get('gallons'); 
-    const fuelEm = formData.get('fuel');
+    const fuel = formData.get('fuel');
     const sel = document.getElementById('fuel')
-    const fuel = sel.options[sel.selectedIndex].text;
+    const fuelText = sel.options[sel.selectedIndex].text;
 
     const fuelConsumption = ((Number(consumption) * Number(distance)) / 100).toFixed(2);
     const litersFuelPerGallon = fuelConsumption / Number(gallons)
@@ -47,7 +47,7 @@ function onSubmit(e){
     const data = {
         gallons,
         result,
-        fuel,
+        fuelText,
         fuelConsumption
     };
     sessionStorage.setItem('userData',JSON.stringify(data))
