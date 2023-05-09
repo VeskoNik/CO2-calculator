@@ -8,7 +8,7 @@ const root = document.getElementById('root');
 
 page(decorateContext);
 page('/CO2-calculator/' , homeView);
-page('/CO2-calculator//result' , resultView);
+page('/CO2-calculator/result' , resultView);
 page.start();
 debugger
 export function decorateContext(ctx, next) {
