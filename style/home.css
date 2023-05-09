@@ -80,13 +80,10 @@ h1 {
 }
 }
  body {
-        background-image: url('/images/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 54vh;
-        height: 99vh;
-        background-position: center,center;
-    }
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #form {
     background-color: rgba(0, 0, 0, 0.5);
