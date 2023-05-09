@@ -7,9 +7,8 @@ console.log('it works')
 const root = document.getElementById('root');
 
 page(decorateContext);
-page('/index.html' , '/');
-page('/' , homeView);
-page('/result' , resultView);
+page('/CO2-calculator/' , homeView);
+page('/CO2-calculator//result' , resultView);
 page.start();
 debugger
 export function decorateContext(ctx, next) {
