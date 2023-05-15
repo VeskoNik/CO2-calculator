@@ -48,7 +48,7 @@ function onSubmit(e){
         gallons,
         result,
         fuelText,
-        fuelConsumption
+        fuelConsumption,
     };
     sessionStorage.setItem('userData',JSON.stringify(data))
     page.redirect('/CO2-calculator/result')
