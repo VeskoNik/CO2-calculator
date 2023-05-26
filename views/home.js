@@ -12,12 +12,15 @@ const homeTemplate = (onSubmit) => html`
             <input id="gallons" name="gallons" type="number" min="1" max="1000" placeholder="min 1 / max 1000" required />
             <img src="/CO2-calculator/images/fuelType.png" alt="fuelType">
             <select id="fuel" name="fuel">
-                <option value="2.8">Gasoline</option>
-                <option value="2.9">Diesel</option>
-                <option value="1.9">LPG</option>
+                <option value="2.33">Gasoline</option>
+                <option value="2.64">Diesel</option>
+                <option value="1.5">LPG</option>
                 <option value="2.9">Gas Oil</option>
                 <option value="1.8">Biogasoline</option>
                 <option value="1.9">Biodiesel</option>
+                <option value="3.15">Aviation fuel(Jet Kerosene)</option>
+                <option value="3.1">Heavy fuel oil</option>
+                <option value="2.4">Coal</option>
             </select>
             <button type="submit">Calculate</button>
         </form>
