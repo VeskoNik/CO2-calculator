@@ -8,9 +8,7 @@ const homeTemplate = (onSubmit) => html`
             <input id="distance" name="distance" type="number" placeholder="100km" required />
             <h3>Consumption</h3>
             <input type="number" name="consumption" id="consumption" step="0.1" placeholder="7.5l" required >
-            <h3>Gallons in a truck</h3>
-            <input id="gallons" name="gallons" type="number" min="1" max="1000" placeholder="min 1 / max 1000" required />
-            <img src="/CO2-calculator/images/fuelType.png" alt="fuelType">
+            <img src="/images/fuelType.png" alt="fuelType">
             <select id="fuel" name="fuel">
                 <option value="2.33">Gasoline</option>
                 <option value="2.64">Diesel</option>
@@ -37,23 +35,19 @@ function onSubmit(e){
 
     const distance = formData.get('distance');
     const consumption = formData.get('consumption');
-    const gallons = formData.get('gallons'); 
-    const fuel = formData.get('fuel');
+    const fuelEm = formData.get('fuel');
     const sel = document.getElementById('fuel')
-    const fuelText = sel.options[sel.selectedIndex].text;
+    const fuel = sel.options[sel.selectedIndex].text;
 
     const fuelConsumption = ((Number(consumption) * Number(distance)) / 100).toFixed(2);
-    const litersFuelPerGallon = fuelConsumption / Number(gallons)
-    const carbonFootPrint = litersFuelPerGallon * fuel
-    const kgCO2PerGallon = (Number(consumption) * Number(distance) * Number(fuel)) / (100 * gallons)
-    const result = (kgCO2PerGallon * Number(gallons)).toFixed(2)
+    const kgCO2PerGallon = (Number(consumption) * Number(distance) * Number(fuelEm)) / 100 
+    const result = kgCO2PerGallon.toFixed(2)
     const data = {
-        gallons,
         result,
-        fuelText,
-        fuelConsumption,
+        fuel,
+        fuelConsumption
     };
     sessionStorage.setItem('userData',JSON.stringify(data))
-    page.redirect('/CO2-calculator/result')
+    page.redirect('/result')
     document.querySelector('form').reset()
 }
