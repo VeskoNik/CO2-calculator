@@ -20,6 +20,6 @@ export function resultView(ctx) {
     ctx.render(loadingTemplate())
     setTimeout(() => {ctx.render(resultTemplate(result,onClick))},3000)
     function onClick() {
-        page.redirect('CO2-calculator/')
+        page.redirect('/CO2-calculator/')
     }
 }
