@@ -6,12 +6,10 @@ const loadingTemplate = () => html`
 const resultTemplate = (item,onClick) => html`
 <h1>Results</h1>
     <div id="result">
-        <h3>Transported gallons</h3>
-        <input type="text" value=${item.gallons} disabled >
         <h3>Total Carbon Footprint</h3>
         <input type="text" value="${`${item.result}kg CO2`}" disabled>
         <h3>Vehicle information</h3>
-        <dl>Fuel: ${item.fuelText}<br>Fuel Consumed: ${item.fuelConsumption}L</dl>
+        <dl>Fuel: ${item.fuel}<br>Fuel Consumption: ${item.fuelConsumption}L</dl>
         <button @click=${onClick} >New Calculation</button>
     </div>
 `
@@ -22,6 +20,6 @@ export function resultView(ctx) {
     ctx.render(loadingTemplate())
     setTimeout(() => {ctx.render(resultTemplate(result,onClick))},3000)
     function onClick() {
-        page.redirect('/CO2-calculator/')
+        page.redirect('/')
     }
 }
