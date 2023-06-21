@@ -7,7 +7,7 @@ const homeTemplate = (onSubmit) => html`
             <h3>Distance</h3>
             <input id="distance" name="distance" type="number" placeholder="100km" required />
             <h3>Consumption</h3>
-            <input type="number" name="consumption" id="consumption" step="0.1" placeholder="7.5l" required >
+            <input type="number" name="consumption" id="consumption" step="0.1" placeholder="7.5l" min="0.1" required >
             <img src="/CO2-calculator/images/fuelType.png" alt="fuelType">
             <select id="fuel" name="fuel">
                 <option value="2.33">Gasoline</option>
